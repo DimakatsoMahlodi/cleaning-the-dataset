@@ -18,54 +18,54 @@ clean data is critical for accurate analysis model training and decision making 
 
 .[Standardizing text entries](#standardizing-text-entries)
 ## Project overview
-i used Google Colab because is an ideal tool for data cleaning .
+1.i used Google Colab because is an ideal tool for data cleaning .
 
-It runs Python code directly in your browser.
+2.It runs Python code directly in your browser.
 
-It has no setup everything is pre-installed.
+3.It has no setup everything is pre-installed.
 
-It allows importing data from your computer or Google Drive.
+4.It allows importing data from your computer or Google Drive.
 
-It supports key libraries like pandas, which is essential for data manipulation.
+5.It supports key libraries like pandas, which is essential for data manipulation.
 so we are cleaning the three data which is are: 
 
-.student-por[1].csv
+-.student-por[1].csv
 
-.heart.csv
+-.heart.csv
 
-.forestfires[1].csv
+-.forestfires[1].csv
 ### Loading the dataset
-Before cleaning you must load the dataset into your workspace
+>Before cleaning you must load the dataset into your workspace
 
-A dataset is usually stored in .csv, .xlsx or other formats.
+>A dataset is usually stored in .csv, .xlsx or other formats.
 
-pandas is a Python library that reads these files into a DataFrame, which is a table-like structure.
+>pandas is a Python library that reads these files into a DataFrame, which is a table-like structure.
 
-In Colab, data can come from your local machine or from Google Drive
+>In Colab, data can come from your local machine or from Google Drive
 ### Inspecting the dataset
 Before cleaning, you need to understand what’s wrong with the data.
 
-Looking at the first few rows to get a sense of the content.
+1.Looking at the first few rows to get a sense of the content.
 
-Checking the shape (how many rows and columns).
+2.Checking the shape (how many rows and columns).
 
-Looking for missing values, incorrect types, or weird entries.
+3.Looking for missing values, incorrect types, or weird entries.
 
-Checking for duplicate rows.
+4.Checking for duplicate rows.
 
-Understanding the structure of the data is key before modifying it.
+5.Understanding the structure of the data is key before modifying it.
 ### Handling Missing Values
-Missing data is a common issue. The theory behind handling it depends on the reason it’s missing.
+>Missing data is a common issue. The theory behind handling it depends on the reason it’s missing.
 
-Remove missing values: If only a few rows are missing data, deleting them is usually safe.
+>Remove missing values: If only a few rows are missing data, deleting them is usually safe.
 
-Impute (fill in) missing values
+>Impute (fill in) missing values
 
-For numerical columns: use the mean, median, or mode.
+>For numerical columns: use the mean, median, or mode.
 
-For categorical columns: use a placeholder like "Unknown" or the most common category.
+>For categorical columns: use a placeholder like "Unknown" or the most common category.
 
- Models and algorithms usually cannot process null values and will give errors or bad results.
+ >Models and algorithms usually cannot process null values and will give errors or bad results.
 ### Removing Duplicates
 Duplicate data can happen due to repeated entries during data collection or merging.
 

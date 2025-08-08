@@ -42,6 +42,14 @@ so we are cleaning the three data which is are:
 >pandas is a Python library that reads these files into a DataFrame, which is a table-like structure.
 
 >In Colab, data can come from your local machine or from Google Drive
+>import pandas as pd
+
+# Load a CSV file
+df = pd.read_csv("data.csv")
+
+# Show the first few rows
+print(df.head())
+
 ### Inspecting the dataset
 Before cleaning, you need to understand what’s wrong with the data.
 

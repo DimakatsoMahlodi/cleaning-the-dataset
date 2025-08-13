@@ -1,4 +1,5 @@
-1. Understand the Dataset
+### Understand the Dataset
+
 forestfires.csv is a well-known UCI dataset with columns like X, Y, month, day, FFMC, DMC, DC, ISI, temp, RH, wind, rain, and area.
 
 It records forest fire occurrences in a Portuguese forest, with meteorological and fire spread data. 
@@ -24,8 +25,9 @@ AND it has 517 rows and 13 columns.
 - Checked for duplicates using:
   ```python
   df.duplicated().sum()
-  
-  7. Final Verification
+
+    ## 4. Final Verification
+
 Confirmed:
 
 No duplicates remain.
@@ -40,3 +42,4 @@ python
 Copy
 Edit
 df.to_csv("forestfires_clean.csv", index=False)
+

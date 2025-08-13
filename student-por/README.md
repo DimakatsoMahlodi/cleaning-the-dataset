@@ -1,9 +1,9 @@
-1. Understand the Data
+# Understand the Data
 Check what each column means (age, sex, school, failures, absences, grades like G1, G2, G3).
 
 Know which are categorical (e.g., sex, school) and which are numerical (e.g., age, absences, grades).
 
-# Student Performance Dataset (`student_por.csv`)
+## Student Performance Dataset (`student_por.csv`)
 
 ## Description
 The `student_por.csv` dataset contains information about students’ performance in Portuguese language classes, including demographic, social, and academic features. It is commonly used for data analysis and machine learning tasks related to student outcomes.
@@ -42,4 +42,5 @@ The dataset was cleaned to ensure accuracy, consistency, and usability for analy
 The cleaned dataset is accurate, consistent, and ready for statistical analysis or machine learning modeling. Cleaning ensures that the dataset produces reliable and meaningful insights.
 
 Cleaning student-por.csv is basically about making sure the data is complete, consistent, and ready for analysis or modeling.
+
 

@@ -43,3 +43,6 @@ Copy
 Edit
 df.to_csv("forestfires_clean.csv", index=False)
 
+### Conclusion
+
+The forestfires.csv dataset was cleaned to ensure accuracy and consistency by checking for duplicates, handling categorical values for month and day, correcting data types, and addressing outliers such as skewness in the area column. After cleaning, the dataset is now structured, reliable, and ready for further analysis and modeling.

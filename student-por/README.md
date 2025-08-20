@@ -1,13 +1,13 @@
 .
 
- Data Cleaning Report: Student-por.csv
-1. Introduction
+# Data Cleaning Report: Student-por.csv
+### 1. Introduction
 
 The Student Performance dataset (Portuguese language course – student-por.csv) contains demographic, social, and academic information on students, aimed at analyzing factors influencing academic success. Raw educational datasets often include missing values, duplicates, inconsistent categorical data, and outliers. To ensure meaningful analysis and reliable modeling, data cleaning was performed.
 
-2. Methods, Materials, and Results
+### 2. Methods, Materials, and Results
 
-Dataset: student-por.csv
+### Dataset: student-por.csv
 Tools Used: Python (Pandas, NumPy, Matplotlib/Seaborn)
 
 Data Cleaning Process and Outcomes:
@@ -28,12 +28,13 @@ Feature Consistency – Column names were standardized for readability, and cate
 
 Final Dataset Shape: (rows × columns) after cleaning, with duplicates removed, missing values handled, and categorical attributes encoded.
 
-3. Discussion
+### 3. Discussion
 
 Data cleaning revealed common issues in educational datasets: missing demographic details, repeated student records, and extreme outliers in attendance/grades. By imputing missing data and removing duplicates, we preserved dataset integrity without reducing sample size excessively. Encoding categorical variables made the dataset suitable for machine learning tasks.
 
 However, limitations remain: imputed demographic data may not perfectly reflect reality, and normalization may mask meaningful differences in extreme absenteeism cases. Additional preprocessing, such as feature engineering (e.g., risk groups for attendance or study time) and balancing grade distributions, may enhance future modeling.
 
-4. Conclusion
+### 4. Conclusion
+
 
 The student-por.csv dataset was systematically cleaned to improve consistency and reliability. Missing values were imputed, duplicates removed, categorical variables encoded, and outliers treated. The final dataset is now ready for robust statistical analysis and predictive modeling in the context of student academic performance.

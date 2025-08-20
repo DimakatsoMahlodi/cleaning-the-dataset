@@ -1,14 +1,14 @@
- Data Cleaning Report: Heart.csv
-1. Introduction
+# Data Cleaning Report: Heart.csv
+### 1. Introduction
 
 The Heart Disease dataset is widely used to study cardiovascular health indicators and predict the likelihood of heart disease. It includes variables such as age, cholesterol, blood pressure, and chest pain type. Raw medical data often contains missing values, duplicates, and inconsistencies, which can bias analysis and reduce model performance. Data cleaning was therefore necessary to prepare the dataset for accurate and reliable predictive modeling.
 
-2. Methods, Materials, and Results
+### 2. Methods, Materials, and Results
 
-Dataset: heart.csv
+### Dataset: heart.csv
 Tools Used: Python (Pandas, NumPy, Matplotlib/Seaborn)
 
-Data Cleaning Process and Outcomes:
+### Data Cleaning Process and Outcomes:
 
 Loading & Inspection – The dataset was imported, and structure, column names, and data types were checked. No major formatting issues were found.
 
@@ -26,12 +26,13 @@ Feature Consistency – Column names were standardized, and inconsistent entries
 
 Final Dataset Shape: (rows × columns) after cleaning, with no missing values and balanced formatting.
 
-3. Discussion
+### 3. Discussion
 
 Data cleaning addressed several quality issues, including missing values, duplicates, and unrealistic outliers. Imputation ensured no loss of patient data, while duplicate removal improved dataset integrity. Categorical encoding allowed clinical features to be integrated into predictive models.
 
 However, limitations remain: imputing values introduces assumptions that may not fully capture clinical reality, and some features may oversimplify patient conditions. Additional preprocessing, such as feature engineering (risk categories, age groups) and class balancing, could improve downstream model accuracy.
 
-4. Conclusion
+### 4. Conclusion
+
 
 The heart.csv dataset was successfully cleaned and is now ready for analysis. Missing values were handled, categorical variables encoded, duplicates removed, and outliers treated. These steps improved dataset reliability and prepared it for predictive modeling, particularly in heart disease risk classification.

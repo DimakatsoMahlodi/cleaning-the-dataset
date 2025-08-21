@@ -5,6 +5,20 @@
 
 This report presents the data cleaning process conducted on three datasets: Forest Fires, Heart Disease, and Student Performance. The aim was to enhance the reliability, consistency, and accuracy of data for further analysis and machine learning tasks. Each dataset exhibited unique challenges, including missing values, outliers, inconsistent formatting, and duplicate entries. A systematic cleaning process was applied, including detection and treatment of missing data, removal of duplicates, correction of categorical inconsistencies, handling of outliers, and normalization of numerical values. The resulting datasets are now more suitable for predictive modeling and statistical analysis.
 
+### Repository Layout
+
+data/raw/ → Stores the original untouched datasets (forestfires.csv, heart.csv, student-por.csv).
+
+data/cleaned/ → Contains the cleaned versions of each dataset, after applying preprocessing steps.
+
+notebooks/ → Includes Jupyter notebooks (.ipynb) showing the entire workflow of data cleaning, with explanations and code.
+
+reports/ → Contains dataset-specific cleaning reports (Introduction, Methods & Materials + Results, Discussion, Conclusion).
+
+README.md → High-level overview of the project (datasets used, cleaning objectives, repo layout, and usage instructions).
+
+requirements.txt → Lists Python dependencies for reproducibility (e.g., pandas, numpy, matplotlib, seaborn, scikit-learn).
+
 ### Datasets
 
 forestfires.csv – Records of forest fire incidents with meteorological and environmental features.
@@ -81,14 +95,4 @@ Student-por.csv: Consistent student performance dataset with uniform formatting.
 
 All three datasets are now free of duplicates, inconsistencies, and outliers, and are ready for exploratory data analysis (EDA) and model development
 
-### Layout of This Report
 
-Abstract – Summary of objectives and outcomes.
-
-Datasets – Description of the three datasets.
-
-Methodology – Step-by-step cleaning approach.
-
-Results – Key cleaning outcomes.
-
-outcome- final report

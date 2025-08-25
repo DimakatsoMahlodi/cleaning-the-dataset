@@ -1,4 +1,4 @@
-# data cleaning
+# Data cleaning
 
 ## Data Cleaning Report
 ### Abstract
@@ -9,15 +9,14 @@ This report presents the data cleaning process conducted on three datasets: Fore
 
 data/raw/ → Stores the original untouched datasets (forestfires.csv, heart.csv, student-por.csv).
 
-data/cleaned/ → Contains the cleaned versions of each dataset, after applying preprocessing steps.
-
 notebooks/ → Includes Jupyter notebooks (.ipynb) showing the entire workflow of data cleaning, with explanations and code.
 
 reports/ → Contains dataset-specific cleaning reports (Introduction, Methods & Materials + Results, Discussion, Conclusion).
 
 README.md → High-level overview of the project (datasets used, cleaning objectives, repo layout, and usage instructions).
 
-requirements.txt → Lists Python dependencies for reproducibility (e.g., pandas, numpy, matplotlib, seaborn, scikit-learn).
+this repository has 3 main directories  each containing its own notebook, README, and raw data
+
 
 ### Datasets
 
@@ -85,14 +84,31 @@ Student Performance: Standardized student demographic/academic features, duplica
 
 The cleaning process successfully transformed three raw datasets into high-quality, consistent, and analysis-ready formats. By addressing missing values, duplicates, outliers, and inconsistencies, the datasets are now prepared for exploratory data analysis (EDA), statistical modeling, and machine learning applications.
 
-### Outcome
 
-ForestFires.csv: Normalized dataset with numeric encodings and reduced skewness.
 
-Heart.csv: Clean and reliable clinical dataset for predictive modeling.
+### Discussion: 
 
-Student-por.csv: Consistent student performance dataset with uniform formatting.
+Data cleaning is one of the most important and time-consuming stages in any data science workflow. It transforms raw, messy data into a reliable and consistent format suitable for analysis or modeling. The process is not just about “fixing errors” — it involves making judgment calls, balancing data quality with preserving useful information.
 
-All three datasets are now free of duplicates, inconsistencies, and outliers, and are ready for exploratory data analysis (EDA) and model development
+### Why Data Cleaning Matters
+
+Raw data often contains missing values, duplicates, outliers, or inconsistencies that can distort results.
+
+Clean data improves model accuracy, reliability of insights, and reproducibility of research.
+
+In some domains (health, finance, environment), poor cleaning decisions can lead to serious misinterpretations.
+
+
+## Conclusion
+
+The data cleaning process resulted in three high-quality datasets:
+
+ForestFires.csv: Normalized with numeric encodings and reduced skewness.
+
+Heart.csv: A clean and reliable clinical dataset suitable for predictive modeling.
+
+Student-por.csv: A consistent student performance dataset with uniform formatting.
+
+All three datasets are now free from duplicates, inconsistencies, and outliers, making them well-prepared for exploratory data analysis (EDA) and model development.
 
 

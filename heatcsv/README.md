@@ -3,28 +3,36 @@
 
 The Heart Disease dataset is widely used to study cardiovascular health indicators and predict the likelihood of heart disease. It includes variables such as age, cholesterol, blood pressure, and chest pain type. Raw medical data often contains missing values, duplicates, and inconsistencies, which can bias analysis and reduce model performance. Data cleaning was therefore necessary to prepare the dataset for accurate and reliable predictive modeling.
 
-### 2. Methods, Materials, and Results
+### 2.Methods & Materials.
 
 ### Dataset: heart.csv
 Tools Used: Python (Pandas, NumPy, Matplotlib/Seaborn)
 
-### Data Cleaning Process and Outcomes:
+Loading & Inspection – Imported dataset, checked structure, column names, and data types.
 
-Loading & Inspection – The dataset was imported, and structure, column names, and data types were checked. No major formatting issues were found.
+Handling Missing Values – Replaced missing values in medical indicators (e.g., cholesterol, blood pressure) with median imputation.
 
-Handling Missing Values – Missing values in medical indicators (e.g., cholesterol, blood pressure) were replaced using median imputation. As a result, no null values remained.
+Removing Duplicates – Removed duplicate patient records to ensure unique entries.
 
-Removing Duplicates – Duplicate patient records were detected and removed, reducing redundancy and ensuring each record represented a unique case.
+Data Type Corrections – Encoded categorical variables (e.g., sex, chest pain type, fasting blood sugar) numerically for modeling.
 
-Data Type Corrections – Categorical variables (e.g., sex, chest pain type, fasting blood sugar) were encoded numerically, making them usable in statistical models.
+Outlier Detection & Treatment – Capped extreme values in cholesterol and maximum heart rate within acceptable ranges to reduce skewness.
 
-Outlier Detection & Treatment – Extreme values in cholesterol and maximum heart rate were identified. Outliers were capped within acceptable ranges, reducing skewness.
+Standardization/Normalization – Normalized continuous variables (age, cholesterol, blood pressure) for comparability.
 
-Standardization/Normalization – Continuous variables (age, cholesterol, blood pressure) were normalized, ensuring comparability across different scales.
+Feature Consistency – Standardized column names and corrected inconsistent entries.
 
-Feature Consistency – Column names were standardized, and inconsistent entries were corrected, resulting in a uniform dataset.
+### Results
 
-Final Dataset Shape: (rows × columns) after cleaning, with no missing values and balanced formatting.
+Missing Values: All handled, resulting in 0 null values.
+
+Duplicates: Successfully removed, ensuring each record is unique.
+
+Outliers: Adjusted, reducing skewness in medical indicators.
+
+Final Dataset: Clean, consistent, and normalized, ready for exploratory data analysis (EDA) and predictive modeling.
+
+Final Shape: (rows × columns) after cleaning.
 
 ### 3. Discussion
 
@@ -36,3 +44,4 @@ However, limitations remain: imputing values introduces assumptions that may not
 
 
 The heart.csv dataset was successfully cleaned and is now ready for analysis. Missing values were handled, categorical variables encoded, duplicates removed, and outliers treated. These steps improved dataset reliability and prepared it for predictive modeling, particularly in heart disease risk classification.
+

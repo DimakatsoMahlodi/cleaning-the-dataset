@@ -11,8 +11,6 @@ data/raw/ → Stores the original untouched datasets (forestfires.csv, heart.csv
 
 notebooks/ → Includes Jupyter notebooks (.ipynb) showing the entire workflow of data cleaning, with explanations and code.
 
-reports/ → Contains dataset-specific cleaning reports (Introduction, Methods & Materials + Results, Discussion, Conclusion).
-
 README.md → High-level overview of the project (datasets used, cleaning objectives, repo layout, and usage instructions).
 
 this repository has 3 main directories  each containing its own notebook, README, and raw data
@@ -89,14 +87,6 @@ The cleaning process successfully transformed three raw datasets into high-quali
 ### Discussion: 
 
 Data cleaning is one of the most important and time-consuming stages in any data science workflow. It transforms raw, messy data into a reliable and consistent format suitable for analysis or modeling. The process is not just about “fixing errors” — it involves making judgment calls, balancing data quality with preserving useful information.
-
-### Why Data Cleaning Matters
-
-Raw data often contains missing values, duplicates, outliers, or inconsistencies that can distort results.
-
-Clean data improves model accuracy, reliability of insights, and reproducibility of research.
-
-In some domains (health, finance, environment), poor cleaning decisions can lead to serious misinterpretations.
 
 
 ## Conclusion

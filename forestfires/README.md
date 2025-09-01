@@ -42,11 +42,12 @@ The cleaned dataset is now consistent, reliable, and ready for further statistic
 
 ## 4. Discussion
 
-Data cleaning revealed that the dataset was relatively complete but had challenges such as duplicate entries and extreme skewness in the target variable area. Removing duplicates improved accuracy, while log transformation made the dataset more suitable for predictive modeling. Standardizing continuous variables ensured comparability across features.
+The data cleaning process confirmed that the dataset was largely complete; however, it presented specific challenges, including duplicate entries and extreme skewness in the target variable (area). Duplicate records were removed to prevent distortion of frequency counts, thereby improving overall accuracy. A logarithmic transformation was applied to the area variable, reducing skewness and enhancing the suitability of the data for predictive modeling. In addition, continuous variables were standardized to ensure comparability across features, facilitating fairer input to subsequent analyses.
 
-However, the dataset is still imbalanced: most fire areas are very small compared to a few extreme cases. This may affect prediction models and should be addressed in further preprocessing (e.g., sampling techniques or advanced transformations).
+Despite these improvements, the dataset remains imbalanced, as the majority of fire areas are very small compared to a limited number of extreme cases. This imbalance poses a risk of bias in prediction models and warrants further preprocessing, such as resampling strategies or advanced transformation methods, to mitigate its effects.
 
 ### 5. Conclusion
 
 The forestfires.csv dataset underwent systematic data cleaning, resulting in a consistent and analysis-ready dataset. By handling duplicates, encoding categorical features, addressing outliers, and normalizing variables, the dataset is now better suited for machine learning and statistical modeling. Further preprocessing (e.g., feature engineering) can enhance its predictive potential.
+
 

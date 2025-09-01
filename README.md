@@ -7,13 +7,7 @@ This report presents the data cleaning process conducted on three datasets: Fore
 
 ### Repository Layout
 
-data/raw/ → Stores the original untouched datasets (forestfires.csv, heart.csv, student-por.csv).
-
-notebooks/ → Includes Jupyter notebooks (.ipynb) showing the entire workflow of data cleaning, with explanations and code.
-
-README.md → High-level overview of the project (datasets used, cleaning objectives, repo layout, and usage instructions).
-
-this repository has 3 main directories  each containing its own notebook, README, and raw data
+This repository has 3 main directories  each containing its own notebook, README, and raw data
 
 
 ### Datasets

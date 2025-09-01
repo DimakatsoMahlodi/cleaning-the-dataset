@@ -38,12 +38,13 @@ Final Shape: (rows × columns) after cleaning
 
 ### 3. Discussion
 
-Data cleaning revealed common issues in educational datasets: missing demographic details, repeated student records, and extreme outliers in attendance/grades. By imputing missing data and removing duplicates, we preserved dataset integrity without reducing sample size excessively. Encoding categorical variables made the dataset suitable for machine learning tasks.
+The data cleaning process revealed several quality issues typical of educational datasets, namely missing demographic attributes, duplicate student records, and extreme outliers in attendance and grade distributions. To address these, missing values were imputed to preserve dataset completeness, duplicates were removed to ensure data integrity, and categorical variables were encoded to enable their integration into machine learning tasks. These steps collectively improved the dataset’s consistency and analytical readiness.
 
-However, limitations remain: imputed demographic data may not perfectly reflect reality, and normalization may mask meaningful differences in extreme absenteeism cases. Additional preprocessing, such as feature engineering (e.g., risk groups for attendance or study time) and balancing grade distributions, may enhance future modeling.
+Despite these improvements, limitations remain. Imputed demographic data are based on assumptions that may not accurately represent the true population, and normalization of extreme absenteeism cases risks obscuring meaningful educational patterns. Future preprocessing, such as feature engineering to create risk categories (e.g., attendance groups or study time levels) and balancing skewed grade distributions, is necessary to enhance model robustness and generalizability.
 
 ### 4. Conclusion
 
 
 The student-por.csv dataset was systematically cleaned to improve consistency and reliability. Missing values were imputed, duplicates removed, categorical variables encoded, and outliers treated. The final dataset is now ready for robust statistical analysis and predictive modeling in the context of student academic performance.
+
 

@@ -84,6 +84,12 @@ The data cleaning process was undertaken to address the inconsistencies and inac
 
 The outcomes of this process indicate a marked improvement in data quality, as reflected by the reduction of missing values to below 1% and the elimination of redundant records. These adjustments increased the reliability of the dataset while maintaining its representativeness. Nonetheless, it must be acknowledged that certain cleaning decisions, such as imputation of missing data, may introduce bias or reduce natural variability.
 
+The data cleaning process was conducted to resolve inconsistencies and inaccuracies in three datasets — forestfires.csv, students-por.csv, and heart.csv — following the principles of the scientific method.
+
+In the observation stage, issues were detected such as missing values (e.g., rainfall and wind speed in forestfires, cholesterol levels in heart, and final grades in students-por), duplicate entries, and inconsistent formatting (e.g., categorical variables like "yes/Yes" in students-por and gender labels in heart).
+
+Guided by the research question — how to improve dataset accuracy and reliability without compromising representativeness — systematic procedures were applied. Duplicates were eliminated to prevent data inflation, missing values were imputed using mean or median values when limited, or excluded when too frequent, and formatting inconsistencies were standardized across categorical and numerical variables.
+
 
 ## Conclusion
 

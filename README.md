@@ -108,21 +108,22 @@ The data cleaning process was conducted to resolve inconsistencies and inaccurac
 In the observation stage, issues were detected such as missing values (e.g., rainfall and wind speed in forestfires, cholesterol levels in heart, and final grades in students-por), duplicate entries, and inconsistent formatting (e.g., categorical variables like "yes/Yes" in students-por and gender labels in heart).
 
 Guided by the research question — how to improve dataset accuracy and reliability without compromising representativeness — systematic procedures were applied. Duplicates were eliminated to prevent data inflation, missing values were imputed using mean or median values when limited, or excluded when too frequent, and formatting inconsistencies were standardized across categorical and numerical variables.
-The data cleaning steps achieved their intended goals:
 
-Overall missingness reduced from ~7% → <1%.
+The data cleaning steps achieved their intended objectives:
 
-Duplicates eliminated across all datasets.
+Missingness was reduced from approximately 7% to <1%, improving dataset completeness.
 
-Skewness corrected, outliers capped, ensuring fairer statistical modeling.
+Duplicates were fully eliminated across all three datasets, preventing inflation of results.
+
+Skewness in heavily right-tailed variables (e.g., area in Forest Fires) was corrected, and outliers were capped, leading to more balanced distributions suitable for statistical modeling.
 
 Trade-offs:
 
-Imputation may reduce natural variability.
+Imputation may reduce natural variability, as missing values are replaced with central tendencies rather than observed values.
 
-Transformations improve normality but can reduce interpretability.
+Transformations (e.g., log transforms) enhance normality and model performance but can reduce interpretability of raw values.
 
-Nevertheless, representativeness and analytical quality were preserved
+Despite these limitations, representativeness and analytical integrity were preserved, resulting in datasets that are both cleaner and more reliable for exploratory data analysis, hypothesis testing, and predictive modeling.
 
 
 ## Conclusion

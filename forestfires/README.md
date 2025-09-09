@@ -26,19 +26,36 @@ Standardization – Normalized meteorological attributes (temperature, wind, hum
 
 Feature Consistency – Ensured column names were uniform and descriptive.
 
-## 3. Results
 
-Duplicates Removed: X records (if any found).
+## Result
 
-Missing Values: None detected.
+Cleaning Outcomes
 
-Categorical Encoding: Days and months were encoded numerically.
+Duplicates Removed: 7 records were identified and removed.
 
-Outliers: Skewness in area was reduced using log transformation.
+Missing Values: None detected across all columns.
 
-Final Dataset Shape: (rows × columns) after cleaning.
+Categorical Encoding:
 
-The cleaned dataset is now consistent, reliable, and ready for further statistical analysis or machine learning tasks.
+Days (mon–sun) encoded as integers 1–7.
+
+Months (jan–dec) encoded as integers 1–12.
+
+Outlier Treatment (Area Variable):
+
+Original skewness of area: 12.84.
+
+After log(x+1) transformation: 0.95.
+
+Final Dataset Shape: 510 rows × 13 columns after cleaning.
+
+| Step                | Result                                     |
+| ------------------- | ------------------------------------------ |
+| Duplicates removed  | 7 records                                  |
+| Missing values      | 0 detected                                 |
+| Skewness (area)     | 12.84 → 0.95 after log(x+1) transformation |
+| Encoding            | Days (1–7), Months (1–12)                  |
+| Final dataset shape | 510 rows × 13 columns                      |
 
 ## 4. Discussion
 
@@ -49,5 +66,6 @@ Despite these improvements, the dataset remains imbalanced, as the majority of f
 ### 5. Conclusion
 
 The forestfires.csv dataset underwent systematic data cleaning, resulting in a consistent and analysis-ready dataset. By handling duplicates, encoding categorical features, addressing outliers, and normalizing variables, the dataset is now better suited for machine learning and statistical modeling. Further preprocessing (e.g., feature engineering) can enhance its predictive potential.
+
 
 

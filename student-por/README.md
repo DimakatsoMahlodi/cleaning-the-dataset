@@ -1,6 +1,5 @@
 
 # Data Cleaning Report: Student-por.csv
-### 1. Introduction
 
 ### 1. Introduction
 
@@ -51,6 +50,7 @@ While the dataset is analysis-ready, limitations remain. Retained extreme values
 ### 5. Conclusion
 
 The student-por.csv dataset was inspected and found to be clean, consistent, and reliable. No missing values or duplicates required treatment, and categorical features were validated for consistency. Although extreme values remain in the absences variable, the dataset is suitable for exploratory data analysis (EDA) and predictive modeling in the context of student academic performance.
+
 
 
 

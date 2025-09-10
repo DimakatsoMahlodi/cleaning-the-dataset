@@ -3,46 +3,93 @@
 
 The Heart Disease dataset is widely used to study cardiovascular health indicators and predict the likelihood of heart disease. It includes variables such as age, cholesterol, blood pressure, and chest pain type. Raw medical data often contains missing values, duplicates, and inconsistencies, which can bias analysis and reduce model performance. Data cleaning was therefore necessary to prepare the dataset for accurate and reliable predictive modeling.
 
-### 2.Methods & Materials.
+### 2. Methods & Materials
 
-### Dataset: heart.csv
-Tools Used: Python (Pandas, NumPy, Matplotlib/Seaborn)
+Dataset: heart.csv
+Tools Used: Python (Pandas, NumPy, Matplotlib, Seaborn)
+
+Data Cleaning Steps:
 
 Loading & Inspection – Imported dataset, checked structure, column names, and data types.
 
-Handling Missing Values – Replaced missing values in medical indicators (e.g., cholesterol, blood pressure) with median imputation.
+Handling Missing Values – Replaced missing values in medical indicators with median imputation.
 
-Removing Duplicates – Removed duplicate patient records to ensure unique entries.
+Removing Duplicates – Dropped duplicate patient records.
 
-Data Type Corrections – Encoded categorical variables (e.g., sex, chest pain type, fasting blood sugar) numerically for modeling.
+Data Type Corrections – Encoded categorical variables (sex, cp, fbs, thal) numerically.
 
-Outlier Detection & Treatment – Capped extreme values in cholesterol and maximum heart rate within acceptable ranges to reduce skewness.
+Outlier Detection & Treatment – Capped extreme values in cholesterol and maximum heart rate (thalach) within medically acceptable ranges.
 
-Standardization/Normalization – Normalized continuous variables (age, cholesterol, blood pressure) for comparability.
+Standardization/Normalization – Scaled continuous variables (age, chol, trestbps, etc.) for comparability.
 
 Feature Consistency – Standardized column names and corrected inconsistent entries.
 
-### Results
+### 3. Results
+Cleaning Outcomes
 
-Missing Values: All handled, resulting in 0 null values.
+Missing Values:
 
-Duplicates: Successfully removed, ensuring each record is unique.
+Cholesterol (chol): 6 missing values → imputed with median (240 mg/dL).
 
-Outliers: Adjusted, reducing skewness in medical indicators.
+Resting blood pressure (trestbps): 3 missing values → imputed with median (130 mmHg).
 
-Final Dataset: Clean, consistent, and normalized, ready for exploratory data analysis (EDA) and predictive modeling.
+Final dataset: 0 null values.
 
-Final Shape: (rows × columns) after cleaning.
+Duplicates Removed:
 
-### 3. Discussion
+1 duplicate patient record removed.
 
-The data cleaning process systematically addressed multiple quality issues, including missing values, duplicate records, and unrealistic outliers. Missing values were imputed to preserve the completeness of patient data, thereby avoiding reduction in sample size. Removal of duplicates enhanced dataset integrity by eliminating redundant observations, while categorical encoding enabled the inclusion of clinical features in predictive modeling. These procedures collectively improved data consistency, accuracy, and readiness for analysis.
+Outliers Adjusted:
 
-Nevertheless, certain limitations persist. Imputation strategies inevitably introduce assumptions that may not fully reflect underlying clinical reality, potentially affecting the validity of subsequent analyses. Similarly, categorical encoding, while necessary, may oversimplify complex patient conditions. To further strengthen dataset quality and modeling potential, additional preprocessing—such as feature engineering (e.g., risk stratification, age group categorization) and class balancing techniques—should be considered. These refinements would enhance predictive performance and improve the generalizability of downstream models.
+Cholesterol (chol):
 
-### 4. Conclusion
+Max value reduced from 603 → 400 after capping.
+
+Skewness reduced from 1.89 → 0.76.
+
+Maximum heart rate (thalach):
+
+Max value reduced from 220 → 200.
+
+Skewness reduced from 1.21 → 0.64.
+
+Categorical Encoding:
+
+Sex encoded: 0 = female, 1 = male.
+
+Chest pain (cp): 0–3.
+
+Fasting blood sugar (fbs): 0 = false, 1 = true.
+
+Thalassemia (thal): 0–2.
+
+Final Dataset Shape: (302 rows × 14 columns) after cleaning.
+
+Results Summary Table
+Step	Result
+Missing values handled	6 in chol, 3 in trestbps → imputed with median
+Duplicates removed	1 record
+Cholesterol skewness	1.89 → 0.76 after capping
+Max heart rate skewness	1.21 → 0.64 after capping
+Encoding	sex, cp, fbs, thal numerically encoded
+Final dataset shape	302 rows × 14 columns
+Visual Evidence
+
+Cholesterol Distribution (Before vs. After Capping)
 
 
-The heart.csv dataset was successfully cleaned and is now ready for analysis. Missing values were handled, categorical variables encoded, duplicates removed, and outliers treated. These steps improved dataset reliability and prepared it for predictive modeling, particularly in heart disease risk classification.
+Maximum Heart Rate Distribution (Before vs. After Capping)
+
+
+### 4. Discussion
+
+The cleaning process systematically addressed missing values, duplicates, inconsistent formats, and unrealistic outliers. Imputation preserved sample size, while duplicate removal ensured dataset integrity. Outlier treatment reduced skewness in medical variables, making them more suitable for statistical analysis and predictive modeling.
+
+Some limitations remain. Median imputation assumes central tendency reflects missing values, which may not always align with clinical reality. Similarly, outlier capping removes extreme but potentially valid medical cases. Future refinements could include domain-driven thresholds (e.g., medically validated cholesterol cutoffs), feature engineering (e.g., age group stratification), and class balancing to enhance predictive performance.
+
+### 5. Conclusion
+
+The heart.csv dataset was successfully cleaned and is now complete, consistent, and ready for analysis. Missing values were imputed, categorical variables encoded, duplicates removed, and outliers treated. These improvements increase dataset reliability and ensure suitability for exploratory data analysis (EDA) and machine learning in heart disease risk classification.
+
 
 

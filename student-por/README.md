@@ -1,50 +1,56 @@
-.
 
 # Data Cleaning Report: Student-por.csv
 ### 1. Introduction
 
-The Student Performance dataset (Portuguese language course – student-por.csv) contains demographic, social, and academic information on students, aimed at analyzing factors influencing academic success. Raw educational datasets often include missing values, duplicates, inconsistent categorical data, and outliers. To ensure meaningful analysis and reliable modeling, data cleaning was performed.
+### 1. Introduction
 
-### 2. Methods & Materials 
+The Student Performance dataset (Portuguese language course – student-por.csv) contains demographic, social, and academic information about students, aimed at analyzing factors influencing academic success. Raw educational datasets often include missing values, duplicates, inconsistent categorical data, and outliers. To ensure meaningful analysis and reliable modeling, systematic data inspection and cleaning were performed.
+
+### 2. Methods & Materials
 
 #### Dataset: student-por.csv
+Tools Used: Python (Pandas, NumPy, Matplotlib, Seaborn)
 
-Tools Used: Python (Pandas, NumPy, Matplotlib/Seaborn
-Loading & Inspection – Imported dataset and examined column types. Categorical attributes included school, sex, address, while numeric features included age and grades.
+Data Cleaning Steps:
 
-Handling Missing Values – Checked for null values. Missing categorical entries were imputed with the mode, while missing numeric values were filled with the median.
+Loading & Inspection – Imported dataset, checked shape, column names, and data types.
 
-Removing Duplicates – Removed duplicate rows to ensure each student was represented only once.
+Missing Values Check – No missing values were detected across any column.
 
-Data Type Corrections – Converted categorical attributes (e.g., school, sex, guardian) into numerical codes for analysis.
+Duplicate Check – No duplicate rows were found.
 
-Outlier Detection & Treatment – Identified outliers in numerical features such as absences and final grades; unrealistic values were capped.
+Data Type Corrections – Categorical variables (school, sex, guardian, etc.) were verified and prepared for encoding.
 
-Standardization/Normalization – Normalized continuous variables (e.g., absences, G1, G2, G3) for comparability across features.
+Outlier Inspection – Histograms of absences and grades (G1, G2, G3) revealed some extreme values. No formal outlier capping or removal was performed in this version of the cleaning process.
 
-Feature Consistency – Standardized column names and corrected categorical entries (e.g., consistent spelling for guardian roles).
+Feature Consistency – Column names were standardized and categorical entries checked for consistency.
 
-### Results
+### 3. Results
 
-Missing Values: All missing entries were imputed, leaving 0 null values.
+Missing Values: None detected → dataset contains 0 null values.
 
-Duplicates: Removed, ensuring unique student records.
+Duplicates: None detected → dataset contains 0 duplicate rows.
 
-Outliers: Adjusted to reduce skewness and prevent distortion in analysis.
+Outliers: Extreme values noted in absences (up to 75 days). These were retained for analysis, though they may be considered for treatment in future preprocessing.
 
-Final Dataset: Clean, normalized, and consistent, ready for exploratory data analysis (EDA) and modeling.
+Final Dataset Shape: 649 rows × 33 columns (unchanged).
 
-Final Shape: (rows × columns) after cleaning
+Results Summary Table
+Step	Result
+Missing values	0 detected
+Duplicates	0 detected
+Outliers	Extreme values noted, no capping done
+Final dataset shape	649 rows × 33 columns
 
-### 3. Discussion
+### 4. Discussion
 
-The data cleaning process revealed several quality issues typical of educational datasets, namely missing demographic attributes, duplicate student records, and extreme outliers in attendance and grade distributions. To address these, missing values were imputed to preserve dataset completeness, duplicates were removed to ensure data integrity, and categorical variables were encoded to enable their integration into machine learning tasks. These steps collectively improved the dataset’s consistency and analytical readiness.
+The dataset required minimal cleaning. No missing values or duplicates were detected, confirming high initial quality. Outlier inspection revealed some extreme absenteeism cases and unusually high grade entries, but no adjustments were made in this version to preserve original data integrity.
 
-Despite these improvements, limitations remain. Imputed demographic data are based on assumptions that may not accurately represent the true population, and normalization of extreme absenteeism cases risks obscuring meaningful educational patterns. Future preprocessing, such as feature engineering to create risk categories (e.g., attendance groups or study time levels) and balancing skewed grade distributions, is necessary to enhance model robustness and generalizability.
+While the dataset is analysis-ready, limitations remain. Retained extreme values may distort statistical summaries and modeling outcomes. In future iterations, preprocessing such as outlier capping, feature engineering (e.g., attendance groups), or class balancing could enhance the robustness and generalizability of predictive models.
 
-### 4. Conclusion
+### 5. Conclusion
 
+The student-por.csv dataset was inspected and found to be clean, consistent, and reliable. No missing values or duplicates required treatment, and categorical features were validated for consistency. Although extreme values remain in the absences variable, the dataset is suitable for exploratory data analysis (EDA) and predictive modeling in the context of student academic performance.
 
-The student-por.csv dataset was systematically cleaned to improve consistency and reliability. Missing values were imputed, duplicates removed, categorical variables encoded, and outliers treated. The final dataset is now ready for robust statistical analysis and predictive modeling in the context of student academic performance.
 
 

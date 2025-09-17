@@ -8,7 +8,7 @@ This report presents the data cleaning process conducted on three datasets: Fore
 
 ### Repository Layout
 
-This repository has 3 main directories  each containing its own notebook, README, and raw data
+This repository has 3 main directories  each containing its own notebook, README, and raw data and the heartml.ipynb.
 
 
 ### Datasets

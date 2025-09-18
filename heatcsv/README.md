@@ -3,6 +3,18 @@
 
 The Heart Disease dataset is widely used to study cardiovascular health indicators and predict the likelihood of heart disease. It includes variables such as age, cholesterol, blood pressure, and chest pain type. Raw medical data often contains missing values, duplicates, and inconsistencies, which can bias analysis and reduce model performance. Data cleaning was therefore necessary to prepare the dataset for accurate and reliable predictive modeling.
 
+The project is divided into two main parts:
+
+heart_.ipynb – Data cleaning & preparation.
+
+heartml_.ipynb – Machine learning modeling & evaluation.
+
+Supporting files:
+
+heart.csv – Raw dataset.
+
+heart_cleaned.pkl – Cleaned dataset for modeling.
+
 ### 2. Methods & Materials
 
 Dataset: heart.csv
@@ -23,6 +35,32 @@ Outlier Detection & Treatment – Capped extreme values in cholesterol and maxim
 Standardization/Normalization – Scaled continuous variables (age, chol, trestbps, etc.) for comparability.
 
 Feature Consistency – Standardized column names and corrected inconsistent entries.
+
+### Machine Learning (heartml_.ipynb)
+
+Loaded cleaned dataset (heart_cleaned.pkl).
+
+Split into training and test sets.
+
+Applied feature scaling.
+
+Trained multiple classifiers:
+
+Logistic Regression
+
+Decision Tree
+
+Random Forest
+
+Support Vector Machine (SVM)
+
+Evaluated performance with accuracy, precision, recall, and F1-score.
+
+Visualized results with:
+
+Confusion matrices for each model.
+
+Bar chart comparison of metrics.
 
 ### 3. Results
 Cleaning Outcomes
@@ -89,7 +127,16 @@ Some limitations remain. Median imputation assumes central tendency reflects mis
 
 ### 5. Conclusion
 
-The heart.csv dataset was successfully cleaned and is now complete, consistent, and ready for analysis. Missing values were imputed, categorical variables encoded, duplicates removed, and outliers treated. These improvements increase dataset reliability and ensure suitability for exploratory data analysis (EDA) and machine learning in heart disease risk classification.
+The heart.csv dataset was successfully cleaned and is now complete, consistent, and ready for analysis. Missing values were imputed, categorical variables encoded, duplicates removed, and outliers treated. These improvements increase dataset reliability and ensure suitability for exploratory data analysis (EDA) and machine learning in heart disease risk classification.The project demonstrates the full data science pipeline:
+
+Raw data (heart.csv) → Clean dataset (heart_cleaned.pkl) → Predictive models (heartml_.ipynb).
+
+Data cleaning significantly improved dataset quality.
+
+Machine learning models achieved strong predictive performance.
+
+This workflow confirms that structured data cleaning and comparative modeling are essential steps toward reliable disease prediction.
+
 
 
 

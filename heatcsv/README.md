@@ -118,12 +118,59 @@ Cholesterol Distribution (Before vs. After Capping)
 
 Maximum Heart Rate Distribution (Before vs. After Capping)
 
+### Cleaning Outcomes
+
+Missing values: 6 (chol), 3 (trestbps) → imputed with median.
+
+Duplicates: 1 record removed.
+
+Outliers capped:
+
+Cholesterol max reduced from 603 → 400.
+
+Max heart rate reduced from 220 → 200.
+
+Skewness reduced:
+
+Cholesterol: 1.89 → 0.76.
+
+Max heart rate: 1.21 → 0.64.
+
+Final dataset shape: 302 rows × 14 columns.
+
+Model Performance
+
+All models successfully trained and tested.
+
+Results displayed in a table and visualized via confusion matrices and a bar chart.
+
+Random Forest and Logistic Regression showed the best balance of precision and recall.
+
 
 ### 4. Discussion
 
 The cleaning process systematically addressed missing values, duplicates, inconsistent formats, and unrealistic outliers. Imputation preserved sample size, while duplicate removal ensured dataset integrity. Outlier treatment reduced skewness in medical variables, making them more suitable for statistical analysis and predictive modeling.
 
 Some limitations remain. Median imputation assumes central tendency reflects missing values, which may not always align with clinical reality. Similarly, outlier capping removes extreme but potentially valid medical cases. Future refinements could include domain-driven thresholds (e.g., medically validated cholesterol cutoffs), feature engineering (e.g., age group stratification), and class balancing to enhance predictive performance.
+
+The cleaning process improved dataset reliability by addressing missing data, duplicates, and outliers. This reduced bias and skewness, leading to better model training conditions.
+Machine learning results showed consistent predictive power across models, with ensemble methods like Random Forest performing particularly well.
+
+Limitations:
+
+Median imputation may not fully capture clinical variability.
+
+Outlier capping may remove rare but valid patient cases.
+
+Class imbalance and lack of feature engineering may affect model generalization.
+
+Future improvements:
+
+Domain-driven thresholds for medical features.
+
+Feature engineering (e.g., age grouping, risk factors).
+
+Balancing techniques (SMOTE, re-weighting).
 
 ### 5. Conclusion
 
@@ -136,6 +183,7 @@ Data cleaning significantly improved dataset quality.
 Machine learning models achieved strong predictive performance.
 
 This workflow confirms that structured data cleaning and comparative modeling are essential steps toward reliable disease prediction.
+
 
 
 

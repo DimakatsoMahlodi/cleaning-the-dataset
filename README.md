@@ -76,16 +76,16 @@ Student Performance: Standardized student demographic/academic features, duplica
 
 The cleaning process successfully transformed three raw datasets into high-quality, consistent, and analysis-ready formats. By addressing missing values, duplicates, outliers, and inconsistencies, the datasets are now prepared for exploratory data analysis (EDA), statistical modeling, and machine learning applications.
 
-| Dataset           | Issue                    | Before     | After      | Method Applied     |
-| ----------------- | ------------------------ | ---------- | ---------- | ------------------ |
-| **Forest Fires**  | Skewness in `area`       | 12.8       | 0.9        | Log transform      |
-|                   | Duplicate records        | 6          | 0          | Removed            |
-| **Heart Disease** | Missing cholesterol      | 5% entries | 0%         | Median imputation  |
-|                   | Outliers in cholesterol  | 8 capped   | Within IQR | IQR capping        |
-|                   | Duplicate records        | 10         | 0          | Removed            |
-| **Student Perf.** | Missing demographics     | 3% entries | 0%         | Logical imputation |
-|                   | Duplicate rows           | 18         | 0          | Dropped            |
-|                   | Outliers (study/alcohol) | 12 cases   | 0          | IQR capping        |
+| Dataset         | Issue                   | Before       | After       | Method Applied       |
+|-----------------|-------------------------|--------------|-------------|----------------------|
+| Forest Fires    | Skewness in area        | 12.8         | 0.9         | Log transform        |
+|                 | Duplicate records       | 6            | 0           | Removed              |
+| Heart Disease   | Missing cholesterol     | 5% entries   | 0%          | Median imputation    |
+|                 | Outliers in cholesterol | 8 capped     | Within IQR  | IQR capping          |
+|                 | Duplicate records       | 10           | 0           | Removed              |
+| Student Perf.   | Missing demographics    | 3% entries   | 0%          | Logical imputation   |
+|                 | Duplicate rows          | 18           | 0           | Dropped              |
+
 
 #### Suggested Visualizations
 
@@ -124,6 +124,25 @@ Imputation may reduce natural variability, as missing values are replaced with c
 Transformations (e.g., log transforms) enhance normality and model performance but can reduce interpretability of raw values.
 
 Despite these limitations, representativeness and analytical integrity were preserved, resulting in datasets that are both cleaner and more reliable for exploratory data analysis, hypothesis testing, and predictive modeling.
+
+The cleaning process improved dataset reliability by addressing missing data, duplicates, and outliers. This reduced bias and skewness, leading to better model training conditions.
+Machine learning results showed consistent predictive power across models, with ensemble methods like Random Forest performing particularly well.
+
+Limitations:
+
+Median imputation may not fully capture clinical variability.
+
+Outlier capping may remove rare but valid patient cases.
+
+Class imbalance and lack of feature engineering may affect model generalization.
+
+Future improvements:
+
+Domain-driven thresholds for medical features.
+
+Feature engineering (e.g., age grouping, risk factors).
+
+Balancing techniques (SMOTE, re-weighting).
 
 
 ## Conclusion
